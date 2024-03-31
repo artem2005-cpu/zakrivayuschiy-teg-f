@@ -112,7 +112,25 @@ main {
 	color: var(--accent-color);
 }
 
-img {
+.image {
+	position: relative;
+}
+
+.image > p {
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: var(--accent-color);
+	mix-blend-mode: hard-light;
+	opacity: 0.5;
+	position: absolute;
+	top: 25px;
+	right: 13px;
+	text-shadow: 0px 0px 10px#d3d3d3;
+}
+
+.image img {
 	display: block;
 	width: 100%;
 	border-top: 2px solid var(--accent-color);
