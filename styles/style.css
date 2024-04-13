@@ -187,6 +187,10 @@ main {
 	position: relative;
 }
 
+.sparks {
+	opacity: 0;
+}
+
 .action-section .card__icon-button:focus {
 	outline: none;
 }

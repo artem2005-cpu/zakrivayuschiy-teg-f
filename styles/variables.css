@@ -6,6 +6,7 @@
 	--font-weight-heading: 700;
 	--bg-color: #fff;
 	--accent-color: #000;
+	--sparks-color: red;
 	--bg-image: repeating-linear-gradient(
 			90deg,
 			#d3d3d3 0 2px,
