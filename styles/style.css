@@ -195,6 +195,77 @@ main {
 	outline: none;
 }
 
+.action-section .card__icon-button .like-icon .heart .core {
+	fill: transparent;
+	transition: fill 0.03s;
+}
+
+.action-section .card__icon-button:hover .like-icon .heart .core {
+	fill: var(--core-color);
+	transition-duration: 0.3s;
+}
+
+.action-section .card__icon-button .like-icon .heart .main-body {
+	fill: transparent;
+	transition: fill 0.3s;
+}
+
+.action-section .card__icon-button:hover .like-icon .heart .main-body {
+	fill: var(--core-color);
+	transition-duration: 0.3s;
+	transition-delay: 0.05s;
+}
+
+.action-section .card__icon-button .like-icon .heart .core {
+	fill: transparent;
+	transition: fill 0.03s;
+}
+
+.action-section .card__icon-button:active .like-icon .heart .core {
+	fill: var(--sparks-color);
+	transition-duration: 0.3s;
+}
+
+.action-section .card__icon-button .like-icon .heart .main-body {
+	fill: transparent;
+	transition: fill 0.3s;
+}
+
+.action-section .card__icon-button:active .like-icon .heart .main-body {
+	fill: var(--sparks-color);
+	transition-duration: 0.3s;
+	transition-delay: 0.05s;
+}
+
+.action-section .card__icon-button .like-icon .heart .contour {
+	transition: fill 0.3s;
+}
+
+.action-section .card__icon-button .is-liked .heart .contour {
+	fill: var(--sparks-color);
+	transition-duration: 0.3s;
+	transition-delay: 0.06s;
+}
+
+.action-section .card__icon-button .is-liked .heart .core {
+	fill: var(--sparks-color);
+	transition-duration: 0.3s;
+}
+
+.action-section .card__icon-button .is-liked .heart .main-body {
+	fill: var(--sparks-color);
+	transition-duration: 0.3s;
+	transition-delay: 0.05s;
+}
+
+.action-section .card__icon-button .is-liked .heart {
+	animation: scale 0.3s 0.1s ease-in;
+}
+
+.action-section .card__icon-button .is-liked .sparks {
+	animation: sparks 0.3s 0.3s ease-in;
+}
+
 .action-section .card__icon-button::after {
 	position: absolute;
 	top: 0;
@@ -239,7 +310,9 @@ main {
 
 .card__like-button {
 	border: 2px solid var(--accent-color);
-	padding: 6.25px 35px;
+	padding: 6.25px 0;
+	width: 130px;
+	height: 38px;
 }
 
 .card__icon-button:focus {
@@ -285,4 +358,27 @@ main {
 
 .footer .button__text {
 	margin-bottom: 15px;
+}
+
+dialog[open] {
+	width: 341px;
+	height: 195px;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+dialog[open] .dialog-display {
+	display: flex;
+	gap: 20px;
+}
+
+dialog[open] .dialog-display svg {
+	fill: black;
+}
+
+dialog[open]::backdrop {
+	background-color: red;
 }
