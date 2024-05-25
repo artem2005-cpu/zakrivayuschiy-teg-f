@@ -356,29 +356,52 @@ main {
 	margin-bottom: 8px;
 }
 
-.footer .button__text {
+.footer > .button__text {
 	margin-bottom: 15px;
 }
 
 dialog[open] {
 	width: 341px;
-	height: 195px;
+	height: 191px;
 	position: fixed;
 	top: 0px;
 	right: 0px;
 	bottom: 0px;
 	left: 0px;
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
+	padding: 30px 40px;
+	background-color: #fff;
+	border: 2px solid black;
 }
 
 dialog[open] .dialog-display {
 	display: flex;
 	gap: 20px;
+	height: 63px;
 }
 
+dialog[open] .dialog-display .button__text {
+	width: 198px;
+}
+
+dialog[open] .card__like-button {
+	width: 100%;
+}
+
+/* FIXME: svg fill and dialog backdrop */
 dialog[open] .dialog-display svg {
-	fill: black;
+	width: 39px;
+	height: 39px;
+	fill: black !important;
 }
 
 dialog[open]::backdrop {
-	background-color: red;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
 }
