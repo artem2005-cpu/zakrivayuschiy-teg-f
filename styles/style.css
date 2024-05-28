@@ -355,15 +355,6 @@ main {
 	height: 100%;
 }
 
-@media (width = 1440px) {
-	.footer .card__icon-button {
-		flex-direction: row;
-	}
-	.footer .card__icon-button > svg {
-		margin-top: 0px;
-	}
-}
-
 .footer .card__icon-button > svg {
 	width: clamp(1.75rem, 1.904rem + -0.6573vw, 1.3125rem);
 	height: clamp(1.75rem, 1.904rem + -0.6573vw, 1.3125rem);
