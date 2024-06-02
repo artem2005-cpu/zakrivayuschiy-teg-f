@@ -219,19 +219,9 @@
 	transition-delay: 0.05s;
 }
 
-.action-section .card__icon-button .like-icon .heart .core {
-	fill: transparent;
-	transition: fill 0.03s;
-}
-
 .action-section .card__icon-button:active .like-icon .heart .core {
 	fill: var(--sparks-color);
 	transition-duration: 0.3s;
-}
-
-.action-section .card__icon-button .like-icon .heart .main-body {
-	fill: transparent;
-	transition: fill 0.3s;
 }
 
 .action-section .card__icon-button:active .like-icon .heart .main-body {
