@@ -176,7 +176,9 @@
 }
 
 .card__icon-button,
-.card__like-button {
+.save-button,
+.card__like-button,
+.sub-button {
 	border: none;
 	background-color: transparent;
 	padding: 0;
@@ -288,16 +290,18 @@
 	padding: 0px clamp(2.15625rem, -9.2324rem + 48.5915vw, 34.5rem) 100px;
 }
 
-.save .card__icon-button span,
-.save .card__icon-button svg,
-.card__like-button span {
+.save .save-button span,
+.save .save-button svg,
+.card__like-button span,
+.sub-button span {
 	position: relative;
 	color: var(--blend-mode);
 	mix-blend-mode: difference;
 }
 
-.save .card__icon-button::before,
-.card__like-button::before {
+.save .save-button::before,
+.card__like-button::before,
+.sub-button::before {
 	content: '';
 	top: 0;
 	left: 0;
@@ -309,24 +313,28 @@
 	position: absolute;
 }
 
-.save .card__icon-button:hover::before,
-.card__like-button:hover::before {
+.save .save-button:hover::before,
+.card__like-button:hover::before,
+.sub-button:hover::before {
 	transform: translateX(0);
 }
 
-.card__like-button {
+.card__like-button,
+.sub-button {
 	border: 2px solid var(--accent-color);
 	padding: 6.25px 0;
 	width: 130px;
 	height: 38px;
 }
 
-.card__icon-button:focus {
+.card__icon-button:focus,
+.save-button:focus {
 	outline: none;
 }
 
 .card__like-button:focus,
-.card__icon-button:last-child:focus {
+.sub-button:focus,
+.save-button:last-child:focus {
 	box-shadow: 2px 2px var(--accent-color);
 	outline: none;
 	transition: box-shadow 0.3s ease-in-out;
@@ -340,7 +348,7 @@
 	color: var(--accent-color);
 }
 
-.save .card__icon-button {
+.save .save-button {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
@@ -352,7 +360,7 @@
 	background-color: var(--bg-color);
 }
 
-.save .card__icon-button > svg {
+.save .save-button > svg {
 	width: clamp(1.3125rem, 1.904rem + -0.6573vw, 1.75rem);
 	height: clamp(1.3125rem, 1.904rem + -0.6573vw, 1.75rem);
 }
@@ -369,8 +377,8 @@ dialog[open] {
 	gap: 30px;
 	flex-direction: column;
 	padding: 30px clamp(1.875rem, 2.7201rem + -0.939vw, 2.5rem);
-	background-color: #fff;
-	border: 2px solid black;
+	background-color: var(--bg-color);
+	border: 2px solid var(--accent-color);
 }
 
 dialog[open] .dialog-display {
@@ -383,20 +391,19 @@ dialog[open] .dialog-display .button__text {
 	width: clamp(12.375rem, 11.5827rem + 3.3803vw, 14.625rem);
 }
 
-dialog[open] .card__like-button {
+dialog[open] .sub-button {
 	width: 100%;
 }
 
-/* FIXME: dialog backdrop */
 dialog[open] .dialog-display svg {
 	width: 39px;
 	height: 39px;
-	color: black;
+	color: var(--accent-color);
 }
 
 dialog::backdrop {
-	background-color: blueviolet;
-	backdrop-filter: blur(7px);
+	background-color: black;
+	opacity: 0.6;
 }
 
 .grayscale {
@@ -425,7 +432,7 @@ dialog::backdrop {
 }
 
 @media (width >= 1440px) {
-	.save .card__icon-button {
+	.save .save-button {
 		flex-direction: row;
 	}
 }

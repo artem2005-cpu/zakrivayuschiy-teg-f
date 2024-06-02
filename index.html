@@ -520,7 +520,12 @@
 				</div>
 			</article>
 			<div class="save">
-				<button type="button" class="card__icon-button">
+				<button
+					type="button"
+					class="save-button"
+					onclick="window['dialog-id'].showModal()"
+					aria-controls="dialog-id"
+				>
 					<svg>
 						<use href="./svg/floppy.svg#floppy"></use>
 					</svg>
@@ -528,14 +533,18 @@
 				</button>
 			</div>
 		</main>
-		<dialog>
+		<dialog id="dialog-id">
 			<div class="dialog-display">
 				<svg>
 					<use href="./svg/floppy.svg#floppy"></use>
 				</svg>
 				<span class="button__text">Вставьте дискету, чтобы продолжить</span>
 			</div>
-			<button type="button" class="card__like-button">
+			<button
+				type="button"
+				class="sub-button"
+				onclick="window['dialog-id'].close()"
+			>
 				<span class="button__text">OK</span>
 			</button>
 		</dialog>
