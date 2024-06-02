@@ -6,6 +6,7 @@
 */
 :root.theme-dark {
 	--bg-color: #000;
+	--blend-mode: #00cc14;
 	--accent-color: #00cc14;
 	--font-weight-main: 465;
 	--font-weight-heading: 785;
@@ -19,6 +20,7 @@
 	--bg-color: #fff;
 	--accent-color: #000;
 	--font-weight-main: 400;
+	--blend-mode: white;
 	--font-weight-heading: 700;
 	--bg-image: repeating-linear-gradient(
 			90deg,
@@ -34,6 +36,7 @@
 		--bg-color: #000;
 		--accent-color: #00cc14;
 		--font-weight-main: 465;
+		--blend-mode: #00cc14;
 		--font-weight-heading: 785;
 		--bg-image: repeating-linear-gradient(
 				90deg,
